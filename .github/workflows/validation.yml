@@ -7,7 +7,6 @@ on:
       - "*/*"
     paths:
       - "modules/**"
-  pull_request:
   workflow_dispatch:
 
 jobs:
@@ -15,15 +14,8 @@ jobs:
     name: Validate Terraform Code
     runs-on: ubuntu-latest
     steps:
-      - name: Log into ghcr
-        uses: docker/login-action@v1
+      - uses: actions/setup-python@v2
+      - name: Run pre-commit
+        uses: pre-commit/action@v2.0.3
         with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Checkout git repo
-        uses: actions/checkout@v2
-
-      - name: Terraform validate
-        run: terraform -chdir ./terraform validate
+          extra_args: terraform_validate --all-files
