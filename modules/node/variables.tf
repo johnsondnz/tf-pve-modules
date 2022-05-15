@@ -66,18 +66,18 @@ variable "deploy_count" {
 
 variable "on_boot" {
   type        = bool
-  default     = true
+  default     = false
   description = "Should this VM start on boot"
 }
 
 variable "started" {
   type        = bool
-  default     = true
+  default     = false
   description = "Should this VM be started after creation"
 }
 
 variable "reboot" {
   type        = bool
   default     = false
-  description = "Should this VM be rebotted after creation"
+  description = "Should this VM be rebooted after creation"
 }
