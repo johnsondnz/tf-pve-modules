@@ -43,4 +43,5 @@ resource "proxmox_virtual_environment_vm" "server" {
 
   on_boot = var.on_boot
   started = var.started
+  reboot  = var.reboot
 }

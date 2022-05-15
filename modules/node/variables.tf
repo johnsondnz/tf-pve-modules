@@ -75,3 +75,9 @@ variable "started" {
   default     = true
   description = "Should this VM be started after creation"
 }
+
+variable "reboot" {
+  type        = bool
+  default     = false
+  description = "Should this VM be rebotted after creation"
+}
