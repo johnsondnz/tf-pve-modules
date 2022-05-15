@@ -3,7 +3,7 @@
 default_stages: [commit, push, manual]
 
 repos:
-  - repo: git@github.com:johnsondnz/pre-commit-coding-standards.git
+  - repo: https://github.com/johnsondnz/pre-commit-coding-standards.git
     rev: v1.1.2
     hooks:
       - id: coding-standards
