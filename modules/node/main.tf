@@ -19,7 +19,7 @@ resource "proxmox_virtual_environment_vm" "server" {
   }
 
   agent {
-    enabled = false
+    enabled = var.agent
   }
 
   cpu {

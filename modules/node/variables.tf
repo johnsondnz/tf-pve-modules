@@ -64,6 +64,13 @@ variable "deploy_count" {
   description = "Number of VMs to deploy"
 }
 
+variable "agent" {
+  type        = bool
+  default     = false
+  description = "Is the qemu agent on this VM"
+}
+
+
 variable "on_boot" {
   type        = bool
   default     = false
