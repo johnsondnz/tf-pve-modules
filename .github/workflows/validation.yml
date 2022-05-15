@@ -1,0 +1,29 @@
+name: Terraform Validation
+on:
+  push:
+    branches:
+      - "master"
+      - "*"
+      - "*/*"
+    paths:
+      - "modules/**"
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  terraform:
+    name: Validate Terraform Code
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log into ghcr
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Checkout git repo
+        uses: actions/checkout@v2
+
+      - name: Terraform validate
+        run: terraform -chdir ./terraform validate
