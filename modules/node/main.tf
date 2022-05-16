@@ -5,12 +5,12 @@ resource "proxmox_virtual_environment_vm" "server" {
 
   node_name = var.target_host
 
-  timeout_move_disk   = "120"
-  timeout_clone       = "120"
-  timeout_start_vm    = "60"
-  timeout_stop_vm     = "60"
-  timeout_reboot      = "60"
-  timeout_shutdown_vm = "60"
+  timeout_move_disk   = var.timeout_move_disk
+  timeout_clone       = var.timeout_clone
+  timeout_start_vm    = var.timeout_start_vm
+  timeout_stop_vm     = var.timeout_stop_vm
+  timeout_reboot      = var.timeout_reboot
+  timeout_shutdown_vm = var.timeout_shutdown_vm
   tablet_device       = false
 
   clone {

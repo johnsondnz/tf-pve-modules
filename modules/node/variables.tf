@@ -88,3 +88,39 @@ variable "reboot" {
   default     = false
   description = "Should this VM be rebooted after creation"
 }
+
+variable "timeout_move_disk" {
+  type        = string
+  default     = "120"
+  description = "Time to wait for disk move"
+}
+
+variable "timeout_clone" {
+  type        = string
+  default     = "120"
+  description = "Time to wait for clone to finish"
+}
+
+variable "timeout_start_vm" {
+  type        = string
+  default     = "120"
+  description = "Time to wait for VM to start"
+}
+
+variable "timeout_stop_vm" {
+  type        = string
+  default     = "120"
+  description = "Time to wait for VM to stop"
+}
+
+variable "timeout_reboot" {
+  type        = string
+  default     = "120"
+  description = "Time to wait for VM to reboot"
+}
+
+variable "timeout_shutdown_vm" {
+  type        = string
+  default     = "120"
+  description = "Time to wait for VM to shutdown"
+}
