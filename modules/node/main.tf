@@ -1,7 +1,6 @@
 resource "proxmox_virtual_environment_vm" "server" {
-  name        = "${var.target_name}-${count.index + 1}"
+  name        = var.target_name
   description = "Managed by Terraform"
-  count       = var.deploy_count
 
   node_name = var.target_host
 
