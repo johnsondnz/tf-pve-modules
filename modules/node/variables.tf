@@ -58,12 +58,6 @@ variable "target_name" {
   description = "The name to assign to the VM"
 }
 
-variable "deploy_count" {
-  type        = string
-  default     = "3"
-  description = "Number of VMs to deploy"
-}
-
 variable "agent" {
   type        = bool
   default     = false
