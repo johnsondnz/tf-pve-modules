@@ -1,4 +1,3 @@
-
 variable "target_pool_id" {
   type        = string
   default     = ""
