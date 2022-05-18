@@ -1,3 +1,10 @@
+
+variable "target_pool_id" {
+  type        = string
+  default     = ""
+  description = "Pool id to assign VM to."
+}
+
 variable "target_datacentre" {
   type        = string
   default     = "home"

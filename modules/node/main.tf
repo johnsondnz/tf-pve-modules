@@ -3,6 +3,7 @@ resource "proxmox_virtual_environment_vm" "server" {
   description = "Managed by Terraform"
 
   node_name = var.target_host
+  pool_id   = var.pool_id
 
   timeout_move_disk   = var.timeout_move_disk
   timeout_clone       = var.timeout_clone
