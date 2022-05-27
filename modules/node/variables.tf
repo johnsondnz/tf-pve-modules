@@ -48,7 +48,6 @@ variable "memory" {
 
 variable "source_vm" {
   type        = string
-  default     = "8000"
   description = "The source VM to clone from"
 }
 

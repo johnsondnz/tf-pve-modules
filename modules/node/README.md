@@ -30,7 +30,7 @@ No modules.
 | <a name="input_memory"></a> [memory](#input\_memory) | The amount of RAM to assign to the VM | `string` | `"2048"` | no |
 | <a name="input_on_boot"></a> [on\_boot](#input\_on\_boot) | Should this VM start on boot | `bool` | `false` | no |
 | <a name="input_reboot"></a> [reboot](#input\_reboot) | Should this VM be rebooted after creation | `bool` | `false` | no |
-| <a name="input_source_vm"></a> [source\_vm](#input\_source\_vm) | The source VM to clone from | `string` | `"8000"` | no |
+| <a name="input_source_vm"></a> [source\_vm](#input\_source\_vm) | The source VM to clone from | `string` | n/a | yes |
 | <a name="input_started"></a> [started](#input\_started) | Should this VM be started after creation | `bool` | `false` | no |
 | <a name="input_target_datacentre"></a> [target\_datacentre](#input\_target\_datacentre) | The name of the datacentre the VM should be deployed to. | `string` | `"home"` | no |
 | <a name="input_target_disk_size"></a> [target\_disk\_size](#input\_target\_disk\_size) | The disk size to assign to the VM | `string` | `"20"` | no |
